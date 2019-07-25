@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design" 
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             
+              Title="Material"
+             
+              xmlns:matd="clr-namespace:XF.Material.Forms.UI.Dialogs;assembly=XF.Material.Forms"
+              xmlns:matdc="clr-namespace:XF.Material.Forms.UI.Dialogs.Configurations;assembly=XF.Material.Forms"
+              xmlns:material="clr-namespace:XF.Material.Forms.UI;assembly=XF.Material.Forms"
+             
+             material:MaterialNavigationPage.AppBarColor="#2c3e50"
+             material:MaterialNavigationPage.AppBarTitleTextAlignment="Start"
+             material:MaterialNavigationPage.AppBarTitleTextFontFamily="{StaticResource FontFamily.RobotoMedium}"
+             material:MaterialNavigationPage.AppBarTitleTextFontSize="14"
+             material:MaterialNavigationPage.StatusBarColor="#1B3147"
+             
+              mc:Ignorable="d" 
+              x:Class="XFMaterialSample.MainPage">
+
+    <ScrollView>
+
+    
+        <StackLayout Padding="20">
+        <!-- Place new controls here -->
+        <material:MaterialCard CornerRadius="2" Elevation="1" HeightRequest="80" HorizontalOptions="FillAndExpand" >
+            
+        <material:MaterialLabel HorizontalOptions="Center"
+                                    Text="Este é um cartão com Material :O "
+                                    TypeScale="Subtitle1"
+                                    VerticalOptions="Center" />
+            
+        </material:MaterialCard>
+        
+        <material:MaterialButton BackgroundColor="#EAEAEA" HorizontalOptions="Center" Text="Botão normal" TextColor="Black" VerticalOptions="Center" />
+        
+        <!-- Button with a normal and pressed elevation of `4` -->
+        <material:MaterialButton Elevation="4" Text="Botão com elevação" />
+        
+        <material:MaterialTextField Placeholder="Digite seu nome" HelperText="Nome do usuario" ErrorText="Texto de erro" Text="" InputType="Default" />
+        <material:MaterialSlider Value="{Binding CurrentValue}" MinValue="0" MaxValue="100" />
+        
+        <material:MaterialChip BackgroundColor="#F2F2F2"  Text="Material chip" TextColor="#DE000000" />
+        
+
+        <material:MaterialCard CornerRadius="2" Elevation="1" HeightRequest="80" HorizontalOptions="FillAndExpand" >
+            
+        <material:MaterialCircularLoadingView WidthRequest="30"
+            HeightRequest="30"
+            TintColor="#6200EE" />
+            
+        </material:MaterialCard>
+
+             <material:MaterialButton Elevation="2" Text="Alerta Dialog" Clicked="btnDialogClicked"/>
+             <material:MaterialButton Elevation="2" Text="RadioButton Dialog" Clicked="btnRadiobuttonClicked"/>
+             <material:MaterialButton Elevation="2" Text="Checkbox Dialog" Clicked="btnCheckBoxClicked"/>
+        
+    </StackLayout>
+
+</ScrollView>
+</ContentPage>
